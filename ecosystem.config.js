@@ -1,13 +1,13 @@
 module.exports = {
   apps : [{
     name: 'API',
-    script: 'app.js',
+    // script: 'app.js',
 
     // Options reference: https://pm2.keymetrics.io/docs/usage/application-declaration/
     args: 'one two',
     instances: 1,
     autorestart: true,
-    watch: false,
+    watch: false, 
     max_memory_restart: '1G',
     env: {
       NODE_ENV: 'development'
@@ -19,12 +19,12 @@ module.exports = {
 
   deploy : {
     production : {
-      user : 'node',
-      host : '212.83.163.1',
+      user : 'ubuntu',
+      host : '54.209.21.181',
       ref  : 'origin/master',
-      repo : 'git@github.com:repo.git',
+      repo : 'git@github.com:kvigneshvaran99/messenget-front.git',
       path : '/var/www/production',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'sudo npm install && sudo npm run build && sudo pm2 reload ecosystem.config.js --env production'
     }
   }
 };
