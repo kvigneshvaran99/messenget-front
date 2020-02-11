@@ -5,9 +5,129 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media only screen 
+and (min-device-width : 100px) 
+and (max-device-width : 667px) {
+  .input-field{
+    display: flex;
+  }
+  .reciever-msg{
+    -moz-user-select: none; 
+      -ms-user-select: none;
+   -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none; 
+  }
+  .online-type{
+    top:44px !important;
+    left:45px !important;
+  }
+  .delete-btn-model{
+    background-color: #0084ff !important;
+    background-image: none;
+    border: 1px solid #0084ff;
+  }
+  .each-user{
+    border:none !important;
+    margin-left: -6px !important;
+    padding: 6px 10px 8px 25px !important;
+  }
+
+  img{
+    height: 60px !important;
+  }
+  .sender-chat-img{
+    height: 40px !important;
+    width: 40px !important;
+  }
+  .back{
+    height: 25px !important;
+    margin-left:12px !important;
+    margin-top: 7px !important;
+  }
+  .logged-user{
+    display: flex;
+    margin-left: -4% !important;
+    margin-top: -1% !important;
+  }
+  .logged-user img{
+    height: 38px !important;
+    width: 38px !important;
+    margin-top: 23px;
+    margin-left: 8%;
+    margin-right: 2%;
+  }
+  .users-list{
+    margin-top: 7px;
+    margin-left: -10px !important;
+    font-weight: 400;
+    font-size: 19px;
+  }
+  .image-comp{
+    width:60px !important;
+    height: 60px !important;
+    border-radius: 50%;
+  }
+  .username-chat{
+     margin-top: 7px !important;
+     margin-left: 10px !important;
+     font-size: 18px !important;
+  }
+  .top-bar{
+    height: 40px !important;
+    background-color: white !important;
+  }
+  .img-chat{
+    height: 40px !important;
+    width: 40px !important;
+    border-radius: 50%;
+  }
+  .input-field{
+    height: 50px !important;
+  }
+  .user-message{
+    height: 30px !important;
+    margin-top: 2px !important;
+  }
+  .send-btn{
+    font-size: 15px !important;
+    padding: 10px 15px 10px 15px !important;
+  }
+  .all-messages{
+    height: calc(100vh - 120px) !important;
+    overflow-y: scroll;
+    
+}
+.list-main{
+    width: 40px !important;
+    border-radius: 50%;
+    margin-top: 8.5% !important;
+    margin-right:3% !important;
+}
+.head-chat{
+  margin-left: 0% !important;
+}
+.list-message{
+  width: 90% !important;
+  text-align: left;
+  white-space: nowrap;
+  /* margin-left: 10px !important; */
+}
+.image-right{
+  margin-left: 4px !important;
+  margin-top: 2px !important;
+  overflow-x: hidden;
+}
+
+
+
+
 }

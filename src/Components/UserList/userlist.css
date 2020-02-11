@@ -1,0 +1,76 @@
+.each-user{
+   margin-left: 10%;
+   
+    margin-right:10% ;
+    margin-top: 2px;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 20px;
+    display: flex;
+    background-color:white ;
+    position: relative;
+}
+.image-con{
+    position: relative;
+    height: 50px;
+    width: 50px;
+}
+.online-type{
+    background-color: green;
+    z-index: 50;
+    height: 14px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    width: 14px;
+}
+.list-main{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-top: 2%;
+}
+.list-message{
+    white-space: nowrap;
+}
+.image-comp{
+    left: 0;
+    height: 100%;
+    width: 100%;
+    top: 0;
+   object-fit: cover;
+   object-position: top;
+    border-radius: 50%;
+    position: absolute;
+}
+
+img{
+    height: 40px;
+}
+
+.head-chat{
+    margin-left: 40px;
+    margin-top: 30px;
+}
+h2{
+    font-weight: 400;
+    font-family: sans-serif;
+    margin: 0;
+    margin-top: 1%;
+    margin-left: 4%;
+}
+.userlist-div{
+    margin: 0;
+}
+.logged-user{
+    
+    display: flex;
+    margin-left: 40%;
+
+}
+.listing{
+    overflow-y: scroll;
+    height:85.5vh
+}

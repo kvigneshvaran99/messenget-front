@@ -1,0 +1,27 @@
+.login_btn{
+    background-color: #0084ff;
+    background-image: none;
+    border: 1px solid #0084ff;
+    border-radius: 24px;
+    color: #fff;
+    cursor: pointer;
+    padding: 7px 17px;
+    font-size: 19px;
+    outline: none;
+}
+
+.input-fields{
+    background: rgba(0, 0, 0, .04);
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-size: 19px;
+    height: 36px;
+    margin-bottom: 12px;
+    padding: 8px 16px;
+    width: 320px;
+    outline: none;
+}
+.top-head{
+    margin-top: 10%;
+}
