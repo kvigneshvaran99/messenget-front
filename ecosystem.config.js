@@ -24,7 +24,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'https://github.com/kvigneshvaran99/messenget-front.git',
       path : '/var/www/production',
-      'post-deploy' : 'sudo npm install && sudo npm run build && sudo pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'npm install && npm run build && pm2 reload ecosystem.config.js --env production'
     }
   }
 };
