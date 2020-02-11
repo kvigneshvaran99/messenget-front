@@ -20,7 +20,7 @@ module.exports = {
   deploy : {
     production : {
       user : 'ubuntu',
-      host : '172.31.16.127',
+      host : '54.209.21.181',
       ref  : 'origin/master',
       repo : 'https://github.com/kvigneshvaran99/messenget-front.git',
       path : '/var/www/production',
