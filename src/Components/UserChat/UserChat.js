@@ -34,7 +34,7 @@ class UserChat extends Component {
        }
         componentDidMount(){
             
-            axios.post('http://localhost:8080/allmessages',{id1:this.props.user.id,id2:this.props.reciever.id})
+            axios.post('backend/allmessages',{id1:this.props.user.id,id2:this.props.reciever.id})
             .then(res=>{
                 this.setState({allMessageData:res.data});
                 this.scrollToBottom();

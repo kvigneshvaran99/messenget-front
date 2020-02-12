@@ -26,7 +26,7 @@ var global ;
 
 
   if (user !== null) {
-    const socket = io.connect(`http://localhost:8080/` + user.username);
+    const socket = io.connect(`backend/` + user.username);
     const audio = new Audio(process.env.PUBLIC_URL+'/message.mp3');
     global=socket;
     socket.on('back to front', (data) => {
