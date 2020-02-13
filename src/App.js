@@ -23,10 +23,10 @@ var global ;
         "https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-us.s3.amazonaws.com%2F83afb31c-38fc-11e9-9988-28303f70fcff?fit=scale-down&source=next&width=700"];
 
 
-
+  const url=process.env.NODE_ENV==="development"?"http://192.168.0.189:8080":"/backend";
 
   if (user !== null) {
-    const socket = io.connect(`/backend/` + user.username);
+    const socket = io.connect(`${url}/` + user.username);
     const audio = new Audio(process.env.PUBLIC_URL+'/message.mp3');
     global=socket;
     socket.on('back to front', (data) => {
@@ -40,13 +40,13 @@ var global ;
 
       <div className="App"  >
         <Router>
-          <Route exact path="/"><FirstPage setUser={setUser} global={global} /></Route>
+          <Route exact path="/"><FirstPage setUser={setUser} global={global} url={url}/></Route>
           {
                 user!==null?
                 <div>
-                <Route exact path="/userlist"><UserList user={user} setReciever={setReciever} usersdp={users} maindp={users[user.id-1]}/></Route>
+                <Route exact path="/userlist"><UserList user={user} setReciever={setReciever} usersdp={users} maindp={users[user.id-1]} url={url}/></Route>
                 {
-                  reciever!==null? <Route exact path="/chats"><UserChat reciever={reciever} user={user} global={global} dp={users[reciever.id-1]}/></Route>:<div></div>
+                  reciever!==null? <Route exact path="/chats"><UserChat reciever={reciever} user={user} global={global} dp={users[reciever.id-1]} url={url}/></Route>:<div></div>
                 }
          
           </div>

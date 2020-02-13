@@ -13,7 +13,7 @@ class UserList extends Component {
     }
 
     componentDidMount(){
-         axios.post("/backend/getAllUsers",{id:this.props.user.id})
+         axios.post(`${this.props.url}/getAllUsers`,{id:this.props.user.id})
          .then(res=>{
              console.log(res.data);
              this.setState({allUsers:res.data.data,online:res.data.online});

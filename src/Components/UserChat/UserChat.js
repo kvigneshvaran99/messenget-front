@@ -34,7 +34,7 @@ class UserChat extends Component {
        }
         componentDidMount(){
             
-            axios.post('/backend/allmessages',{id1:this.props.user.id,id2:this.props.reciever.id})
+            axios.post(`${this.props.url}/allmessages`,{id1:this.props.user.id,id2:this.props.reciever.id})
             .then(res=>{
                 this.setState({allMessageData:res.data});
                 this.scrollToBottom();
@@ -45,7 +45,7 @@ class UserChat extends Component {
                  let dataArray=this.state.allMessageData;
                  dataArray.push(data)
                  this.setState({allMessageData:dataArray})
-                //  this.scrollToBottom();
+                  this.scrollToBottom();
             })
             this.props.global.on('delete res',(data)=>{
                 let dataArray=this.state.allMessageData;
@@ -61,6 +61,7 @@ class UserChat extends Component {
         }
         deleteChat(id){
             this.props.global.emit('delete req',{"id":id,"from":this.props.user,"to":this.props.reciever});
+            console.log(this.props.global)
             let dataArray=this.state.allMessageData;
             for (let i=0;i<dataArray.length;i++){
                 if(id===dataArray[i].id){
@@ -99,10 +100,11 @@ class UserChat extends Component {
                 recieversId:this.props.reciever.id,
                 message:this.state.message
             }
-            dataArray.push(newMessage)
+            dataArray.push(newMessage);
+            console.log()
             this.setState({allMessageData:dataArray,message:""})
            }
-           else{
+        else{
                this.setState({message:""})
            }
            this.scrollToBottom();

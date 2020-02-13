@@ -17,7 +17,7 @@ class FirstPage extends Component {
              this.setState({[event.target.name]:event.target.value})
          }
          handleSubmit(){
-             axios.post("/backend/usercheck",{username:this.state.input,password:this.state.password})
+             axios.post(`${this.props.url}/usercheck`,{username:this.state.input,password:this.state.password})
              .then(res=>{ 
                  console.log(res.data);
                  this.setState({password:""})
