@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {withRouter} from "react-router-dom"
+import {withRouter, Link} from "react-router-dom"
 import axios from "axios";
 import "./firstpage.css";
 class FirstPage extends Component {
@@ -51,6 +51,8 @@ class FirstPage extends Component {
                 <br></br>
                 <h3>{this.state.info}</h3>
                 <button className="login_btn" onClick={()=>this.handleSubmit()}>Log-In</button>
+                <br></br>
+                <h3 className="signup">Not a member? <Link to="/signup" className="link"><span className="signup_link">   Click Here</span></Link></h3>
             </div>
         )
     }

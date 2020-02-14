@@ -5,6 +5,7 @@ import io from 'socket.io-client';
 import FirstPage from './Components/FirstPage/FirstPage';
 import UserList from './Components/UserList/UserList';
 import UserChat from './Components/UserChat/UserChat';
+import SignUp from './Components/SignUp/signUp';
 
 function App() {
 
@@ -41,6 +42,7 @@ var global ;
       <div className="App"  >
         <Router>
           <Route exact path="/"><FirstPage setUser={setUser} global={global} url={url}/></Route>
+          <Route exact path="/signup"><SignUp/></Route>
           {
                 user!==null?
                 <div>

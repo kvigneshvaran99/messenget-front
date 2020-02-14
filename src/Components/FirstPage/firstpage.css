@@ -9,7 +9,18 @@
     font-size: 19px;
     outline: none;
 }
-
+.signup_link{
+    
+    margin-left: 0.5%;
+    color:#0084ff ;
+}
+.link{
+    text-decoration: none;
+}
+.signup{
+    margin-top:3%;
+    font-weight:400 ;
+}
 .input-fields{
     background: rgba(0, 0, 0, .04);
     border: none;
