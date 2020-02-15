@@ -126,6 +126,20 @@ and (max-device-width : 667px) {
   margin-top: 2px !important;
   overflow-x: hidden;
 }
+.signup-div{
+  width: 85% !important;
+}
+.adduser-div{
+  width: 100% !important;
+}
+.add-user{
+  height: 150px !important;
+  width: 150px !important;
+  object-fit: cover !important;
+   object-position: top !important;
+   background-color: rgba(0, 0, 0, .04) !important;
+}
+
 
 
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import io from 'socket.io-client';
+// import io from 'socket.io-client';
 import FirstPage from './Components/FirstPage/FirstPage';
 import UserList from './Components/UserList/UserList';
 import UserChat from './Components/UserChat/UserChat';
@@ -27,13 +27,13 @@ var global ;
   const url=process.env.NODE_ENV==="development"?"http://192.168.0.189:8080":"/backend";
 
   if (user !== null) {
-    const socket = io.connect(`/socket.io/` + user.username);
+    // const socket = io.connect(`/socket.io/` + user.username);
     const audio = new Audio(process.env.PUBLIC_URL+'/message.mp3');
-    global=socket;
-    socket.on('back to front', (data) => {
+    // global=socket;
+    // socket.on('back to front', (data) => {
       audio.play();
-      console.log(data);
-    })
+      // console.log(data);
+    // })
 
   }
 

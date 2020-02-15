@@ -1,21 +1,51 @@
 .signup-details{
-    margin-top:8% ;
+    margin-top:3% ;
     display: block;
     margin-left: 0%;
     margin-right: 0%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+}
+.add-user{
+    height: 150px;
+    width: 150px;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    border-radius: 50%;
+    object-fit: cover;
+   object-position: top;
+   background-color: rgba(0, 0, 0, .04);
+}
+.info{
+    text-align: left;
+    font-size: 10px;
+    margin: 0;
+    margin-bottom: 7%;
+}
+li{
+    text-align: left;
+    margin-left: -10px;
+}
+ol{
+    text-align: left;
 }
 .submit-signup{
+    margin-top: 3%;
     margin-bottom: 10%;
 }
 .img-signup{
     align-items: center;
     margin-left: 40%;
     margin-top: 10%;
-    margin-bottom: 1%;
+    margin-bottom: 0%;
     height: 60px;
 }
 .signup-div{
     display: inline-grid;
+    width: 30%;
 }
 input[type="file"]{
     display: none;
@@ -28,10 +58,14 @@ input[type="file"]{
 }
 label{
     padding: 10px;
-    background: black; 
+    background: white; 
     margin-top: 20px;
-    color: #fff;
+    color: transparent;
     border-radius: 20px;
     margin-bottom: 30px;
     cursor: pointer;
+
      }
+label:active{
+    background: none;
+}

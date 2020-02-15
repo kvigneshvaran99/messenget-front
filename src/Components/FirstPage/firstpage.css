@@ -18,8 +18,9 @@
     text-decoration: none;
 }
 .signup{
-    margin-top:3%;
+    margin-top:10%;
     font-weight:400 ;
+    margin-bottom:0px !important;
 }
 .input-fields{
     background: rgba(0, 0, 0, .04);
