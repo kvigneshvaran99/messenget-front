@@ -20,10 +20,10 @@ class UserList extends Component {
          })
     }
 
-    userChat(username,id){
+    userChat(username,id,userDp){
         console.log(username,id)
-        localStorage.setItem("reciever",JSON.stringify({"username":username,"id":id}));
-        this.props.setReciever({"username":username,"id":id});
+        localStorage.setItem("reciever",JSON.stringify({"username":username,"id":id,"userDp":userDp}));
+        this.props.setReciever({"username":username,"id":id,"userDp":userDp});
         this.props.history.push("/chats");
     }
     checkOnline(name){
@@ -47,16 +47,16 @@ class UserList extends Component {
                {this.props.user!==""?
                     <div className="userlist-div">
                         <div className="logged-user">
-                        <img alt="messenger" className="list-main" src={this.props.maindp}></img>
+                        <img alt="messenger" className="list-main" src={this.props.user.userDp}></img>
                         <h1 className="head-chat">Chats</h1>
                         </div>
                         <div className="listing">
                         {this.state.allUsers.map((Element,index)=>{
                             if(this.props.user.username!==Element.username){
                                 return(
-                                    <div id={Element.id} className="each-user" onClick={()=>this.userChat(Element.username,Element.id)}>
+                                    <div id={Element.id} className="each-user" onClick={()=>this.userChat(Element.username,Element.id,Element.userDp)}>
                                         <div className="image-con"> 
-                                        <img alt="dp" className="image-comp" src={this.props.usersdp[index]}></img>
+                                        <img alt="dp" className="image-comp" src={Element.userDp}></img>
                                         {this.checkOnline(Element.username)?<span className="online-type"></span>:<span></span>}
                                         
                                         </div>

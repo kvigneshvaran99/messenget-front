@@ -7,6 +7,18 @@
     width: 100%;
     height: 50px;
 }
+.uniqueBtn{
+    width: 40%;
+    margin-bottom: 3%;
+    border-radius: 20px;
+    outline: none;
+    height: 20px;
+}
+.availablePng{
+    width: 25px;
+    height: 25px;
+    margin-left: 1%;
+}
 .add-user{
     height: 150px;
     width: 150px;
@@ -19,6 +31,12 @@
    object-position: top;
    background-color: rgba(0, 0, 0, .04);
 }
+.signin-route{
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+}
+
 .info{
     text-align: left;
     font-size: 10px;
@@ -31,6 +49,10 @@ li{
 }
 ol{
     text-align: left;
+}
+.signup-modal{
+    display: flex;
+    margin-left: 28%;
 }
 .submit-signup{
     margin-top: 3%;

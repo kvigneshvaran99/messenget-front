@@ -130,12 +130,12 @@ class UserChat extends Component {
        
     render() {
        
-       console.log(this.state.allMessageData)
+       console.log(this.props.reciever)
         return (
             <div id="user-chat">
                 <div className="top-bar">
                     <img className="back" src={img} alt="prev" onClick={()=>this.previousPage()}></img>
-                    <img alt="messenger" className="img-chat" src={this.props.dp}></img>
+                    <img alt="messenger" className="img-chat" src={this.props.reciever.userDp}></img>
                     <h2 className="username-chat">{this.props.reciever.username}</h2>
                 </div>
                 
@@ -155,7 +155,7 @@ class UserChat extends Component {
                       else{
                           return(
                               <div className="sender-end">
-                                  <img className="sender-chat-img" alt="dp" src={this.props.dp}></img>
+                                  <img className="sender-chat-img" alt="dp" src={this.props.reciever.userDp}></img>
                                   <p >{Element.message}</p>
                                   
                               </div>

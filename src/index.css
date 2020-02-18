@@ -139,7 +139,15 @@ and (max-device-width : 667px) {
    object-position: top !important;
    background-color: rgba(0, 0, 0, .04) !important;
 }
-
+.signup-modal{
+  margin-left: 0% !important;
+}
+.availablePng{
+  width: 30px !important;
+  height: 30px !important;
+  margin-left: 1%;
+  margin-top: -2%;
+}
 
 
 
